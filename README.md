@@ -7,8 +7,9 @@ One of ID/X Partners' clients in the banking industry faced challenges in data r
 
 This project aims to design a centralized Data Warehouse (DWH) and build an automated ETL (Extract, Transform, Load) pipeline to clean, integrate, and load data, making it readily available for daily analysis and reporting.
 
-![IDX-Dashboard-PowerBI](https://github.com/user-attachments/assets/1fff4461-fc20-4f6f-acb8-7a7bf6e5ebb0)
+<img width="1154" height="484" alt="Screenshot 2026-03-06 000342" src="https://github.com/user-attachments/assets/4faa16ca-1416-43c6-a7d1-f2fdf4833c2e" />
 
+![IDX-Dashboard-PowerBI](https://github.com/user-attachments/assets/1fff4461-fc20-4f6f-acb8-7a7bf6e5ebb0)
 
 ## Tech Stack
 * **Database Management System:** Microsoft SQL Server (SSMS)
