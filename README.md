@@ -7,13 +7,19 @@ One of ID/X Partners' clients in the banking industry faced challenges in data r
 
 This project aims to design a centralized Data Warehouse (DWH) and build an automated ETL (Extract, Transform, Load) pipeline to clean, integrate, and load data, making it readily available for daily analysis and reporting.
 
+![IDX-Dashboard-PowerBI](https://github.com/user-attachments/assets/1fff4461-fc20-4f6f-acb8-7a7bf6e5ebb0)
+
+
 ## Tech Stack
 * **Database Management System:** Microsoft SQL Server (SSMS)
 * **ETL Tool:** Talend Open Studio for Data Integration
 * **Business Intelligence:** Microsoft Power BI
 
 ## Data Architecture and Schema
-This project implements a **Star Schema** data modeling approach for the target Data Warehouse, consisting of:
+
+<img width="725" height="460" alt="Screenshot 2026-03-05 111813" src="https://github.com/user-attachments/assets/7c5d91a0-8d4e-4146-adcc-d5562da59935" />
+
+This project implements a **Star Schema** data modeling approach to denormalize tables for optimized Data Warehouse, consisting of:
 
 **1. Dimension Tables:**
 * `DimCustomer`: Stores customer profile data (consolidated from `customer`, `city`, and `state` tables).
@@ -26,9 +32,12 @@ This project implements a **Star Schema** data modeling approach for the target 
 *(All tables and columns in the DWH have been standardized using the `PascalCase` format in accordance with business rules).*
 
 ## ETL Pipeline Workflow (Talend)
+
+<img width="917" height="374" alt="Screenshot 2026-03-05 060320" src="https://github.com/user-attachments/assets/248dd598-5401-4876-afe4-2a21bc817c9d" />
+
 The ETL process is designed to handle various data source formats and automate data cleansing:
 
-1. **Extract:** * Retrieving fragmented transactional data from `transaction_excel` (.xlsx), `transaction_csv` (.csv), and `transaction_db` (SQL Server).
+1. **Extract:** Retrieving fragmented transactional data from `transaction_excel` (Excel), `transaction_csv` (CSV), and `transaction_db` (SQL Server).
    * Extracting master data (`account`, `customer`, `branch`, `city`, `state`) from SQL Server.
 2. **Transform:**
    * **Unification (`tUnite`):** Merging the three transaction data sources into a single, unified data stream.
@@ -55,8 +64,6 @@ As an added value to this project, the data loaded into the Data Warehouse is vi
 The interactive dashboard is divided into two main views:
 1. **Branch Performance:** Displays transaction trends and daily transaction amounts, while comparing performance across bank branches (including a breakdown of transaction types such as Deposit, Withdrawal, Transfer, and Payment).
 2. **Customer Profiling:** Analyzes customer demographics based on gender, account status percentage (active vs. terminated), and geospatial mapping to visualize transaction distribution across various cities.
-
-*(Screenshots of the dashboard are available in this repository).*
 
 ## Repository Structure
 * `sql_scripts/`: DDL scripts for Data Warehouse schema creation and Stored Procedure scripts.
